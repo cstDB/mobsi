@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyApp.UpdateView1">
+
+  <ScrollView>
+  <StackLayout Orientation="Vertical"
+                Margin="10,10,10,10">
+
+    <Frame OutlineColor="Gray">
+      <StackLayout Orientation="Horizontal">
+        <Label Text="Datum: 01.10.2017"
+            TextColor="Gray"
+               HorizontalOptions="Start"/>
+        <Label Text="Zeit: 13:23"
+            TextColor="Gray"
+               HorizontalOptions="EndAndExpand"
+               HorizontalTextAlignment="End"/>
+      </StackLayout>
+    </Frame>
+
+
+    <Frame OutlineColor="Gray">
+      <StackLayout Orientation="Vertical">
+
+        <Label Text="Aktuelle Fahrt"
+               TextColor="Red"
+               FontAttributes="Bold"
+              HorizontalTextAlignment="Center"
+              Margin="0,0,0,3"/>
+
+        <Label Text="Start:"
+               TextColor="Gray"
+              HorizontalTextAlignment="Start"/>
+        <Label HorizontalTextAlignment="Start"
+               TextColor="Gray">
+          <Label.FormattedText>
+            <FormattedString>
+              <Span Text="&#9632;" ForegroundColor="Red" FontAttributes="Bold" />
+              <Span Text=" Frankfurt HbF" />
+            </FormattedString>
+          </Label.FormattedText>
+        </Label>
+        <Label HorizontalTextAlignment="Start"
+               TextColor="Gray">
+          <Label.FormattedText>
+            <FormattedString>
+              <Span Text="&#9632;" ForegroundColor="Red" FontAttributes="Bold" />
+              <Span Text=" ICE 4711" />
+            </FormattedString>
+          </Label.FormattedText>
+        </Label>
+        <Label HorizontalTextAlignment="Start"
+               TextColor="Gray">
+          <Label.FormattedText>
+            <FormattedString>
+              <Span Text="&#9632;" ForegroundColor="Red" FontAttributes="Bold" />
+              <Span Text=" 11:45 Uhr, heute" />
+            </FormattedString>
+          </Label.FormattedText>
+        </Label>
+        <Label HorizontalTextAlignment="Start"
+               TextColor="Gray">
+          <Label.FormattedText>
+            <FormattedString>
+              <Span Text="&#9632;" ForegroundColor="Red" FontAttributes="Bold" />
+              <Span Text="198 km - 594 Coins" />
+            </FormattedString>
+          </Label.FormattedText>
+        </Label>
+
+        <Label Text="" FontSize="Micro"/>
+        <Label Text="Umstieg:"
+               TextColor="Gray"
+              HorizontalTextAlignment="Start"/>
+        <Label HorizontalTextAlignment="Start"
+               TextColor="Gray">
+          <Label.FormattedText>
+            <FormattedString>
+              <Span Text="&#9632;" ForegroundColor="Red" FontAttributes="Bold" />
+              <Span Text=" Kassel Wilhelmshöhe" />
+            </FormattedString>
+          </Label.FormattedText>
+        </Label>
+        <Label HorizontalTextAlignment="Start"
+               TextColor="Gray">
+          <Label.FormattedText>
+            <FormattedString>
+              <Span Text="&#9632;" ForegroundColor="Red" FontAttributes="Bold" />
+              <Span Text=" RE 22156 nach Hessisch-Lichtenau" />
+            </FormattedString>
+          </Label.FormattedText>
+        </Label>
+        <Label HorizontalTextAlignment="Start"
+               TextColor="Gray">
+          <Label.FormattedText>
+            <FormattedString>
+              <Span Text="&#9632;" ForegroundColor="Red" FontAttributes="Bold" />
+              <Span Text=" 13:12 Uhr, heute" />
+            </FormattedString>
+          </Label.FormattedText>
+        </Label>
+
+
+      </StackLayout>
+    </Frame>
+
+    <Frame OutlineColor="Gray">
+      <StackLayout Orientation="Vertical">
+        <Label Text="Mein Zug: RE 22156"
+                   TextColor="Gray"/>
+        <Label Text="Kassel Wilhelmshöhe - Hessisch-Lichtenau"
+                   TextColor="Gray"/>
+      </StackLayout>
+    </Frame>
+
+    <Frame OutlineColor="Gray">
+      <Label Text="Aktueller Kontostand: 494 Coins"
+                   TextColor="Gray"/>
+    </Frame>
+
+    <Frame OutlineColor="Gray">
+      <StackLayout Orientation="Vertical">
+        <Button Text="Korrektur"
+               TextColor="White"
+              BackgroundColor="Red"
+               FontAttributes="Bold"
+                Clicked="CorrectRide_Clicked"/>
+        <Button Text="Aktualisieren"
+               TextColor="White"
+              BackgroundColor="Red"
+               FontAttributes="Bold"
+                Clicked="UpdateView2_Clicked"/>
+      </StackLayout>
+    </Frame>
+
+
+
+  </StackLayout>
+  </ScrollView>
+
+</ContentPage>

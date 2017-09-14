@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyApp.ViewAccountBalance">
+
+
+  <StackLayout Orientation="Vertical"
+                Margin="10,10,10,10">
+
+  <Frame OutlineColor="Gray">
+    <StackLayout Orientation="Horizontal">
+      <Label Text="Datum: 01.10.2017"
+            TextColor="Gray"
+               HorizontalOptions="Start"/>
+      <Label Text="Zeit: 13:23"
+            TextColor="Gray"
+               HorizontalOptions="EndAndExpand"
+               HorizontalTextAlignment="End"/>
+    </StackLayout>
+  </Frame>
+
+
+  <Frame OutlineColor="Gray">
+    <StackLayout Orientation="Vertical">
+
+      <Label Text="Meine Aufladungen:"
+               TextColor="Red"
+               FontAttributes="Bold"
+              HorizontalTextAlignment="Center"
+              Margin="0,0,0,10"/>
+
+        <Label Text="23.01.2017:"
+            TextColor="Gray"
+               FontAttributes="Bold"/>
+        <Label Text="30 Coins à 28 ct/Coin = 8,40 €"
+            TextColor="Gray"/>
+
+        <Label Text="" FontSize="Micro"/>
+        <Label Text="17.02.2017:"
+            TextColor="Gray"
+               FontAttributes="Bold"/>
+        <Label Text="500 Coins à 24 ct/Coin = 120 €"
+            TextColor="Gray"/>
+
+        <Label Text="" FontSize="Micro"/>
+        <Label Text="22.03.2017:"
+            TextColor="Gray"
+               FontAttributes="Bold"/>
+        <Label Text="2.000 Coins à 20 ct/Coin = 400 €"
+            TextColor="Gray"/>
+
+        <Label Text="" FontSize="Micro"/>
+        <Label Text="30.04.2017:"
+            TextColor="Gray"
+               FontAttributes="Bold"/>
+        <Label Text="10.000 Coins à 15 ct/Coin = 1500 €"
+            TextColor="Gray"/>
+
+
+      </StackLayout>
+
+  </Frame>
+
+
+    <Frame OutlineColor="Gray">
+      <StackLayout Orientation="Vertical">
+        <Label Text="Kontostand niedrig!"
+            TextColor="Gray"
+               FontAttributes="Bold"/>
+        <Label Text="Aktueller Kontostand: 467 Coins"
+            TextColor="Gray"
+               FontAttributes="Bold"/>
+      </StackLayout>
+    </Frame>
+
+    <Button Text="Konto aufladen"
+               TextColor="White"
+              BackgroundColor="Red"
+               FontAttributes="Bold"
+                Clicked="TopUpAccount_Clicked"/>
+
+  </StackLayout>
+
+
+</ContentPage>

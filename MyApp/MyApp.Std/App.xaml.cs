@@ -13,8 +13,9 @@ namespace MyApp.Std
         {
             InitializeComponent();
 
-            MainPage = new MyApp.Std.MainPage();
-        }
+            //MainPage = new MyApp.Std.MainPage();
+            MainPage = new NavigationPage(new MainPage()); //damit man neue Pages aufmachen kann
+    }
 
         protected override void OnStart()
         {

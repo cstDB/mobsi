@@ -43,6 +43,30 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UpdateView2.xaml.cs">
+      <DependentUpon>UpdateView2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewAccountBalance.xaml.cs">
+      <DependentUpon>ViewAccountBalance.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TopUpAccount.xaml.cs">
+      <DependentUpon>TopUpAccount.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewGeneral.xaml.cs">
+      <DependentUpon>ViewGeneral.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CorrectRide.xaml.cs">
+      <DependentUpon>CorrectRide.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateView1.xaml.cs">
+      <DependentUpon>UpdateView1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewMyRides.xaml.cs">
+      <DependentUpon>ViewMyRides.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewCurrentRide.xaml.cs">
+      <DependentUpon>ViewCurrentRide.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainPage.xaml">
@@ -56,6 +80,54 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="project.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ViewCurrentRide.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ViewAccountBalance.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TopUpAccount.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ViewMyRides.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ViewGeneral.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CorrectRide.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="UpdateView1.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="UpdateView2.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

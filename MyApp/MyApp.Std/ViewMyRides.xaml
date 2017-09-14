@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyApp.ViewMyRides">
+
+  <ScrollView>
+    <StackLayout Orientation="Vertical"
+               Margin="10,5,10,5">
+
+      <Frame OutlineColor="Gray">
+        <StackLayout Orientation="Horizontal">
+          <Label Text="Datum: 01.10.2017"
+            TextColor="Gray"
+               HorizontalOptions="Start"/>
+          <Label Text="Zeit: 13:23 Uhr"
+            TextColor="Gray"
+               HorizontalOptions="EndAndExpand"
+               HorizontalTextAlignment="End"/>
+        </StackLayout>
+      </Frame>
+
+
+      <Frame OutlineColor="Gray">
+        <StackLayout Orientation="Vertical">
+
+          <Label Text="Meine Fahrten"
+               TextColor="Red"
+               FontAttributes="Bold"
+              HorizontalTextAlignment="Center"
+              Margin="0,0,0,0"/>
+
+          <Label Text="Montag:"
+               TextColor="Gray"
+              HorizontalTextAlignment="Start"
+               FontAttributes="Bold"/>
+
+          <Grid HorizontalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+              <RowDefinition Height="Auto" />
+              <RowDefinition Height="Auto" />
+              <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="Auto" />
+              <ColumnDefinition Width="Auto" />
+              <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label TextColor="Red" 
+                 Text="&#9632;"
+                 Grid.Row="0"
+                 Grid.Column="0"/>
+            <Label TextColor="Gray" 
+                 Text="Bike:"
+                 Grid.Row="0"
+                 Grid.Column="1"/>
+            <Label TextColor="Gray" 
+                 Text="Frankfurt am Main - JPP 1"
+                 Grid.Row="0"
+                 Grid.Column="2"/>
+            <Label TextColor="Gray" 
+                 Text="nach Westend 23"
+                 Grid.Row="1"
+                 Grid.Column="2"/>
+            <Label TextColor="Gray" 
+                 Text="3 km - Verbrauch 0,3 Coins"
+                 Grid.Row="2"
+                 Grid.Column="2"/>
+          </Grid>
+
+
+
+          <Grid HorizontalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+              <RowDefinition Height="Auto" />
+              <RowDefinition Height="Auto" />
+              <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="Auto" />
+              <ColumnDefinition Width="Auto" />
+              <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label TextColor="Red" 
+                 Text="&#9632;"
+                 Grid.Row="0"
+                 Grid.Column="0"/>
+            <Label TextColor="Gray" 
+                 Text="Tram:"
+                 Grid.Row="0"
+                 Grid.Column="1"/>
+            <Label TextColor="Gray" 
+                 Text="Frankfurt am Main - Willi-Brandt-Platz"
+                 Grid.Row="0"
+                 Grid.Column="2"/>
+            <Label TextColor="Gray" 
+                 Text="nach Römer"
+                 Grid.Row="1"
+                 Grid.Column="2"/>
+            <Label TextColor="Gray" 
+                 Text="1 km - Verbrauch 1 Coins"
+                 Grid.Row="2"
+                 Grid.Column="2"/>
+          </Grid>
+
+
+
+
+
+          <Label Text="Gestern:"
+               TextColor="Gray"
+              HorizontalTextAlignment="Start"
+               FontAttributes="Bold"/>
+
+          <Grid HorizontalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+              <RowDefinition Height="Auto" />
+              <RowDefinition Height="Auto" />
+              <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="Auto" />
+              <ColumnDefinition Width="Auto" />
+              <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label TextColor="Red" 
+                 Text="&#9632;"
+                 Grid.Row="0"
+                 Grid.Column="0"/>
+            <Label TextColor="Gray" 
+                 Text="Bike:"
+                 Grid.Row="0"
+                 Grid.Column="1"/>
+            <Label TextColor="Gray" 
+                 Text="Frankfurt am Main - JPP 1"
+                 Grid.Row="0"
+                 Grid.Column="2"/>
+            <Label TextColor="Gray" 
+                 Text="nach Westend 23"
+                 Grid.Row="1"
+                 Grid.Column="2"/>
+            <Label TextColor="Gray" 
+                 Text="3 km - Verbrauch 0,3 Coins"
+                 Grid.Row="2"
+                 Grid.Column="2"/>
+          </Grid>
+
+
+          <Label Text="Heute:"
+               TextColor="Gray"
+              HorizontalTextAlignment="Start"
+               FontAttributes="Bold"/>
+
+          <Grid HorizontalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+              <RowDefinition Height="Auto" />
+              <RowDefinition Height="Auto" />
+              <RowDefinition Height="Auto" />
+              <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="Auto" />
+              <ColumnDefinition Width="Auto" />
+              <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label TextColor="Red" 
+                 Text="&#9632;"
+                 Grid.Row="0"
+                 Grid.Column="0"/>
+            <Label TextColor="Gray" 
+                 Text="Bahn:"
+                 Grid.Row="0"
+                 Grid.Column="1"/>
+            <Label TextColor="Gray" 
+                 Text="Frankfurt am Main - HbF"
+                 Grid.Row="0"
+                 Grid.Column="2"/>
+            <Label TextColor="Gray" 
+                 Text="nach Hessisch-Lichtenau"
+                 Grid.Row="1"
+                 Grid.Column="2"/>
+            <Label TextColor="Gray" 
+                 Text="198 km Fernverkehr- Verbrauch 594 Coins"
+                 Grid.Row="2"
+                 Grid.Column="2"/>
+            <Label TextColor="Gray" 
+                 Text="27 km Nahverkehr- Verbrauch 27 Coins"
+                 Grid.Row="3"
+                 Grid.Column="2"/>
+          </Grid>
+
+
+
+
+
+        </StackLayout>
+      </Frame>
+
+    </StackLayout>
+  </ScrollView>
+</ContentPage>
