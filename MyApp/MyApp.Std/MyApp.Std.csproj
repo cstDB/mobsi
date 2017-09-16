@@ -39,6 +39,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Beacon\IBeaconHandler.cs" />
+    <Compile Include="Beacon\BeaconListChangedEventArgs.cs" />
+    <Compile Include="Beacon\SharedBeacon.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -51,6 +54,9 @@
     </Compile>
     <Compile Include="TopUpAccount.xaml.cs">
       <DependentUpon>TopUpAccount.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewBeacons.xaml.cs">
+      <DependentUpon>ViewBeacons.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewGeneral.xaml.cs">
       <DependentUpon>ViewGeneral.xaml</DependentUpon>
@@ -129,6 +135,13 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ViewBeacons.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

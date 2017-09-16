@@ -12,4 +12,5 @@
     {       await Navigation.PushAsync(new ViewAccountBalance());     }      private async void TopUpAccount_Clicked(object sender, EventArgs e)
     {       await Navigation.PushAsync(new TopUpAccount());     }      private async void ViewMyRides_Clicked(object sender, EventArgs e)
     {       await Navigation.PushAsync(new ViewMyRides());     }      private async void ViewGeneral_Clicked(object sender, EventArgs e)
-    {       await Navigation.PushAsync(new ViewGeneral());     }    } } 
+    {       await Navigation.PushAsync(new ViewGeneral());     }      private async void ViewBeacons_Clicked(object sender, EventArgs e)
+    {       await Navigation.PushAsync(new ViewBeacons());     }         } } 

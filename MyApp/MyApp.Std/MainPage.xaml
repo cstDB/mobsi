@@ -56,6 +56,12 @@
                FontAttributes="Bold"
                 Clicked="ViewGeneral_Clicked"/>
 
+        <Button Text="Show me the money"
+               TextColor="White"
+              BackgroundColor="Blue"
+               FontAttributes="Bold"
+                Clicked="ViewBeacons_Clicked"/>
+
       </StackLayout>
 
     </Frame>

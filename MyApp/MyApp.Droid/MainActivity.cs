@@ -8,22 +8,58 @@ using Android.Widget;
 using Android.OS;
 using MyApp.Std;
 using MyApp.Droid;
+using AltBeaconOrg.BoundBeacon;
+using MyApp.Beacon;
+using AltBeaconOrg.BoundBeacon.Startup;
+using MyApp.Droid.Beacon;
+using Android.Content;
+
+
+using Android.Support.V4.App;
+using AltBeaconOrg.BoundBeacon.Powersave;
+using Android.Util;
+
 
 namespace MyApp.Droid
 {
-    [Activity(Label = "MyApp", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
+  [Activity(Label = "mobsi", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+  public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity, IBeaconConsumer
+  {
+    protected override void OnCreate(Bundle bundle)
     {
-        protected override void OnCreate(Bundle bundle)
-        {
-            TabLayoutResource = Resource.Layout.Tabbar;
-            ToolbarResource = Resource.Layout.Toolbar;
+      TabLayoutResource = Resource.Layout.Tabbar;
+      ToolbarResource = Resource.Layout.Toolbar;
 
-            base.OnCreate(bundle);
+      base.OnCreate(bundle);
 
-            global::Xamarin.Forms.Forms.Init(this, bundle);
-            LoadApplication(new App());
-        }
+      global::Xamarin.Forms.Forms.Init(this, bundle);
+      LoadApplication(new App());
+
+
+      
     }
-}
+
+
+    public MyApp.Droid.Beacon.BeaconHandler mBeaconHandler; //wird vom Service selber gesetzt. Irgendwie doof aber egal.
+    public void OnBeaconServiceConnect()
+    {
+      mBeaconHandler.StartMonitoring();
+
+      //https://community.estimote.com/hc/en-us/articles/203356607-What-are-region-Monitoring-and-Ranging-
+      mBeaconHandler.StartRanging(); 
+    }
+
+    protected override void OnDestroy()
+    {
+      mBeaconHandler.myDispose();
+      mBeaconHandler = null;
+    }
+
+    //protected override void OnResume()
+    //{
+    //  //if (mBeaconHandler != null) mBeaconHandler.StartMonitoring();
+    //}
+
+  }//end class
+}//end namespace
 
