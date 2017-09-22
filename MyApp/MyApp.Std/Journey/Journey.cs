@@ -54,7 +54,7 @@ namespace MyApp.Journey
             Travel travel = this.getCurrentJourney();
             if (travel == null)
             {
-                throw new Exception('There is no journey started');
+                throw new Exception("There is no journey started");
             }
 
             travel.endLocation = endLocation;
