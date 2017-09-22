@@ -43,6 +43,7 @@
     <Compile Include="Beacon\BeaconListChangedEventArgs.cs" />
     <Compile Include="Beacon\SharedBeacon.cs" />
     <Compile Include="JourneyDetection\JourneyDetectorICE.cs" />
+    <Compile Include="JourneyDetection\TrainEventArgs.cs" />
     <Compile Include="Journey\Store.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -153,9 +154,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
-  <ItemGroup>
-    <Folder Include="Rest\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

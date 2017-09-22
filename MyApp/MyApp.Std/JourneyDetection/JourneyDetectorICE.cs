@@ -19,7 +19,7 @@ namespace MyApp.JourneyDetection
 
         bool mTrainStarted;
         public ObservableCollection<SharedBeacon> Beacons { get; set; } = new ObservableCollection<SharedBeacon>();
-        public event EventHandler TrainStarted;
+        public event EventHandler<TrainEventArgs> TrainStarted;
 
         public JourneyDetectorICE()
         {
@@ -29,7 +29,7 @@ namespace MyApp.JourneyDetection
             initEvents();
         }
 
-        protected virtual void OnTrainStarted(EventArgs e)
+        protected virtual void OnTrainStarted(TrainEventArgs e)
         {
             if (TrainStarted != null)
                 TrainStarted(this, e);
@@ -79,7 +79,15 @@ namespace MyApp.JourneyDetection
         private bool handleTimer()
         {
             mTrainStarted = trainStarted();
-            if (mTrainStarted) OnTrainStarted(new EventArgs());
+           
+            if (mTrainStarted) {
+                OnTrainStarted(new TrainEventArgs());
+                TrainEventArgs arg = new TrainEventArgs();
+                arg.startLocation = new Journey.Model.Coord { Desc = "You are here"};
+                arg.startTime = DateTime.Now;
+                arg.beaconIdOnEnter = Beacons[0].BeaconId; //TODO könnte auch ein anderer sein
+                //string trainId = ;
+            }
             //True = Repeat again, False = Stop the timer
             return !mTrainStarted; //wenn wir einen Zug haben, hören wir auf zu prüfen ob wir losgefahren sind
         }
