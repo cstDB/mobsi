@@ -1,7 +1,7 @@
 ﻿{
   "dependencies": {
     "AndroidAltBeaconLibrary": "2.10.0.31004-pre2",
-    "Xamarin.Forms": "2.3.4.270"
+    "Xamarin.Forms": "2.3.4.247"
   },
   "frameworks": {
     "MonoAndroid,Version=v7.1": {}
