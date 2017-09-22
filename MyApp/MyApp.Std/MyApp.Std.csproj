@@ -42,13 +42,14 @@
     <Compile Include="Beacon\IBeaconHandler.cs" />
     <Compile Include="Beacon\BeaconListChangedEventArgs.cs" />
     <Compile Include="Beacon\SharedBeacon.cs" />
+    <Compile Include="Journey\Model\Medium\TravelMedium.cs" />
     <Compile Include="Journey\Store.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Journey\Model\Coord.cs" />
     <Compile Include="Journey\Model\Travel.cs" />
-    <Compile Include="Journey\Model\TravelICE.cs" />
+    <Compile Include="Journey\Model\Medium\TravelICE.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Journey\Journey.cs" />
     <Compile Include="UpdateView2.xaml.cs">

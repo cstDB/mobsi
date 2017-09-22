@@ -9,11 +9,6 @@ namespace MyApp.Journey.Model
         IN_PROGRESS
     }
 
-    enum TravelMethod
-    {
-        ICE
-    }
-
     class Travel
     {
         public Status Status { get; set; }
@@ -21,7 +16,7 @@ namespace MyApp.Journey.Model
         public DateTime EndTime { get; set; }
         public Coord startLocation { get; set; }
         public Coord endLocation { get; set; }
-        public TravelMedium Medium { get; set; }
+        public TravelICE Medium { get; set; }
 
     }
 }
