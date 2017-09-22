@@ -17,7 +17,7 @@ namespace MyApp.Journey
             Travel travel = new Travel();
             travel.startLocation = startLocation;
             travel.StartTime = startTime;
-            travel.Status = Status.FINISHED;
+            travel.Status = Status.IN_PROGRESS;
 
             travel.Medium = new TravelICE();
             travel.Medium.TrainId = trainId;
@@ -76,7 +76,7 @@ namespace MyApp.Journey
 
             foreach (Travel travel in Store.Storage)
             {
-                if (retVal.Status == Status.IN_PROGRESS)
+                if (travel.Status == Status.IN_PROGRESS)
                 {
                     retVal = travel;
                     break;
