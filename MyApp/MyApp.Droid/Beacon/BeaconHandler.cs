@@ -11,7 +11,8 @@ using Android.Support.V4.App;
 using AltBeaconOrg.BoundBeacon.Powersave;
 using Android.Util;
 using AltBeaconOrg.BoundBeacon.Startup;
-
+using Android;
+using Android.Content.PM;
 
 [assembly: Xamarin.Forms.Dependency(typeof(MyApp.Droid.Beacon.BeaconHandler))]
 namespace MyApp.Droid.Beacon
@@ -34,10 +35,13 @@ namespace MyApp.Droid.Beacon
 
     public BeaconHandler()
     {
-      initService();
+  
+           initService();
     }
 
-    private void initService() {
+   
+
+        private void initService() {
 
       mBeaconManager = BeaconManager.GetInstanceForApplication(Xamarin.Forms.Forms.Context);
 

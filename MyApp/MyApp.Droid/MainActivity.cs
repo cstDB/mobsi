@@ -18,7 +18,7 @@ using Android.Content;
 using Android.Support.V4.App;
 using AltBeaconOrg.BoundBeacon.Powersave;
 using Android.Util;
-
+using Android;
 
 namespace MyApp.Droid
 {
@@ -32,18 +32,31 @@ namespace MyApp.Droid
 
       base.OnCreate(bundle);
 
+
       global::Xamarin.Forms.Forms.Init(this, bundle);
       LoadApplication(new App());
 
-
       
+
+
     }
 
+        static string[] PERMISSIONS = {
+            Manifest.Permission.AccessCoarseLocation,
+            Manifest.Permission.AccessFineLocation
+};
 
-    public MyApp.Droid.Beacon.BeaconHandler mBeaconHandler; //wird vom Service selber gesetzt. Irgendwie doof aber egal.
+
+        public MyApp.Droid.Beacon.BeaconHandler mBeaconHandler; //wird vom Service selber gesetzt. Irgendwie doof aber egal.
     public void OnBeaconServiceConnect()
     {
-      mBeaconHandler.StartMonitoring();
+
+            if (CheckSelfPermission(Manifest.Permission.AccessCoarseLocation) != (int)Permission.Granted)
+            {
+                RequestPermissions(PERMISSIONS, 0);
+            }
+
+            mBeaconHandler.StartMonitoring();
 
       //https://community.estimote.com/hc/en-us/articles/203356607-What-are-region-Monitoring-and-Ranging-
       mBeaconHandler.StartRanging(); 
