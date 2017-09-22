@@ -34,8 +34,15 @@
                LineBreakMode="WordWrap"
                Margin="0,0,0,10"/>
 
+                <Label Text="Binding Christian"
+               TextColor="Blue"
+               FontAttributes="Bold"
+              HorizontalTextAlignment="Center"
+              Margin="0,0,0,0"/>
 
-        <Label Text="Beacons found"
+
+
+                <Label Text="Beacons found"
                TextColor="Blue"
                FontAttributes="Bold"
               HorizontalTextAlignment="Center"

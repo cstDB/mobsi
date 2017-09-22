@@ -13,9 +13,11 @@ namespace MyApp.Beacon
     public string MacAddress { get; set; }
     public string Major { get; set; }
     public string Minor { get; set; }
+    public DateTime Added { get; set; }
+    
 
 
-    public string DisplayString {
+        public string DisplayString {
       get{
         return "Id = " + BeaconId + "; MacAdresse = " + MacAddress + "; Distance = " + Distance + "; Major = " + Major + "; Minor= " + Minor; 
       }

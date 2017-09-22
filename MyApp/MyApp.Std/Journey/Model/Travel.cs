@@ -3,13 +3,13 @@ using System;
 
 namespace MyApp.Journey.Model
 {
-    enum Status
+    public enum Status
     {
         FINISHED,
         IN_PROGRESS
     }
 
-    class Travel
+    public class Travel
     {
         public Status Status { get; set; }
         public DateTime StartTime { get; set; }
