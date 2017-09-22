@@ -5,67 +5,73 @@
              x:Class="MyApp.Std.MainPage">
 
 
-
-  <StackLayout Orientation="Vertical"
+    <ScrollView>
+        <StackLayout Orientation="Vertical"
                Margin="10,60,10,30">
 
-    <Frame OutlineColor="Gray">
-      <StackLayout Orientation="Horizontal">
-        <Label Text="Datum: 01.10.2017"
+            <Frame OutlineColor="Gray">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Datum: 01.10.2017"
             TextColor="Gray"
                HorizontalOptions="Start"/>
-        <Label Text="Zeit: 13:23"
+                    <Label Text="Zeit: 13:23"
             TextColor="Gray"
                HorizontalOptions="EndAndExpand"
-               HorizontalTextAlignment="End"/>        
-      </StackLayout>
-    </Frame>
+               HorizontalTextAlignment="End"/>
+                </StackLayout>
+            </Frame>
 
 
-    <Frame OutlineColor="Gray">
-      <StackLayout Orientation="Vertical">
+            <Frame OutlineColor="Gray">
+                <StackLayout Orientation="Vertical">
 
-       <Label Text="Hallo Eva, schön Dich zu sehen!"
+                    <Label Text="Hallo Eva, schön Dich zu sehen!"
                TextColor="Red"
                FontAttributes="Bold"
               HorizontalTextAlignment="Center"
               Margin="0,0,0,10"/>
-        <Button Text="Aktuelle Fahrt anzeigen"
+                    <Button Text="Aktuelle Fahrt anzeigen"
                TextColor="White"
               BackgroundColor="Red"
                FontAttributes="Bold"
                 Clicked="ViewCurrentRide_Clicked"/>
-        <Button Text="Kontostand anzeigen"
+                    <Button Text="Kontostand anzeigen"
                TextColor="White"
               BackgroundColor="Red"
                FontAttributes="Bold"
                 Clicked="ViewAccountBalance_Clicked"/>
-        <Button Text="Konto aufladen"
+                    <Button Text="Konto aufladen"
                TextColor="White"
               BackgroundColor="Red"
                FontAttributes="Bold"
                 Clicked="TopUpAccount_Clicked"/>
-        <Button Text="Meine Fahrten"
+                    <Button Text="Meine Fahrten"
                TextColor="White"
               BackgroundColor="Red"
                FontAttributes="Bold"
                 Clicked="ViewMyRides_Clicked"/>
-        <Button Text="Übersicht - Allgemeines"
+                    <Button Text="Übersicht - Allgemeines"
                TextColor="White"
               BackgroundColor="Red"
                FontAttributes="Bold"
                 Clicked="ViewGeneral_Clicked"/>
 
-        <Button Text="Show me the money"
+                    <Button Text="Show me the money"
                TextColor="White"
               BackgroundColor="Blue"
                FontAttributes="Bold"
                 Clicked="ViewBeacons_Clicked"/>
 
-      </StackLayout>
+                    <Button Text="Be prepared ...."
+               TextColor="White"
+              BackgroundColor="Blue"
+               FontAttributes="Bold"
+                Clicked="BePrepared_Clicked"/>
 
-    </Frame>
+                </StackLayout>
 
-  </StackLayout>
+            </Frame>
 
+        </StackLayout>
+    </ScrollView>
 </ContentPage>

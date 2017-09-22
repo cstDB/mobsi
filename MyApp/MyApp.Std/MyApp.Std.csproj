@@ -42,6 +42,7 @@
     <Compile Include="Beacon\IBeaconHandler.cs" />
     <Compile Include="Beacon\BeaconListChangedEventArgs.cs" />
     <Compile Include="Beacon\SharedBeacon.cs" />
+    <Compile Include="JourneyDetection\JourneyDetectorICE.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
