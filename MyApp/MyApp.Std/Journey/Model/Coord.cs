@@ -10,5 +10,6 @@ namespace MyApp.Journey.Model
     {
         public float Latitude;
         public float Longitude;
+        public string Desc;
     }
 }
