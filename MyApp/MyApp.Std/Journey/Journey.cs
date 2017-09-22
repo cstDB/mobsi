@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MyApp.Journey
 {
-    class Journey
+    public class Journey
     {
 
         public Travel startJourneyWithICE(Coord startLocation, DateTime startTime, string beaconIdOnEnter, string trainId)

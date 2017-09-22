@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyApp.Journey.Model
 {
-    class Coord
+    public class Coord
     {
         public float Latitude;
         public float Longitude;

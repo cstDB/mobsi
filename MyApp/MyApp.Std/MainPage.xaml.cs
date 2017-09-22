@@ -9,11 +9,12 @@ namespace MyApp.Std
 {
   public partial class MainPage : ContentPage
   {
-         
+      
+        
     public MainPage()
     {
       InitializeComponent();
-
+       
 
     }
 
