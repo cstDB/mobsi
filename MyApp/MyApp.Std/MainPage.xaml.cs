@@ -25,6 +25,7 @@ using System; using System.Collections.Generic; using System.Linq; using S
         private void handleTrainStartDetected(object o, TrainEventArgs a)
         {
             mJourney.startJourneyWithICE(a.startLocation, a.startTime, a.beaconIdOnEnter, a.trainId);
+            DisplayAlert("Alert", "Train started", "OK");
         }
 
         private async void ViewCurrentRide_Clicked(object sender, EventArgs e)

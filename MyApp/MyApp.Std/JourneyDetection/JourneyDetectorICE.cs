@@ -79,14 +79,17 @@ namespace MyApp.JourneyDetection
                 arg.startLocation = new Journey.Model.Coord { Desc = "You are here"};
                 arg.startTime = DateTime.Now;
                 arg.beaconIdOnEnter = Beacons[0].BeaconId; //TODO könnte auch ein anderer sein
-                //string trainId = ;
+                //arg.trainId = TrainUtils.TrainID().Result;
+                arg.trainId = "MyTrainID";
+
             }
             //True = Repeat again, False = Stop the timer
             return !mTrainStarted; //wenn wir einen Zug haben, hören wir auf zu prüfen ob wir losgefahren sind
         }
 
         private bool trainStarted() {
-            bool trainDrivingWLAN = TrainUtils.Driving().Result;
+            //bool trainDrivingWLAN = TrainUtils.Driving().Result;
+            bool trainDrivingWLAN = true;
             foreach (SharedBeacon beacon in Beacons)
             {
                 if (DateTime.Now.AddSeconds(-10) >= beacon.Added) { 

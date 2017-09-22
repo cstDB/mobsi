@@ -14,5 +14,15 @@ namespace Rest
             long speed = res.Data.TrainLocation.TrainLocationOSpeed;
             return (speed != 0);
         }
+
+
+        public async static Task<string> TrainID()
+        {
+            RestClient client = new RestClient();
+            TrainData res = await client.getTrainData();
+            string trainid = res.Triebzugnummer.Tzn;
+            return trainid;
+        }
+
     }
 }
