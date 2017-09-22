@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyApp.Journey.Model.Medium
 {
-    class TravelICE
+    public class TravelICE
     {
         public string TrainId;
         public string BeaconIdOnEnter;
