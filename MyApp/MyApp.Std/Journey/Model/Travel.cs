@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MyApp.Journey.Model.Medium;
+using System;
 
 namespace MyApp.Journey.Model
 {
@@ -22,9 +19,9 @@ namespace MyApp.Journey.Model
         public Status Status { get; set; }
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
-        public TravelMethod TravelMethod { get; set; }
         public Coord startLocation { get; set; }
         public Coord endLocation { get; set; }
+        public TravelMedium Medium { get; set; }
 
     }
 }

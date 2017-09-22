@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyApp.Journey.Model
+namespace MyApp.Journey.Model.Medium
 {
-    class TravelICE
+    class TravelICE: TravelMedium
     {
-        public string trainNumber;
+        public string TrainId;
         public string BeaconIdOnEnter;
         public string BeaconIdOnLeave;
         public Int16 travelledDistanceInKM;
