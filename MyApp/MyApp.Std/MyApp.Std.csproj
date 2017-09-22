@@ -73,6 +73,11 @@
     <Compile Include="ViewCurrentRide.xaml.cs">
       <DependentUpon>ViewCurrentRide.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Rest\RestClient.cs" />
+    <Compile Include="Rest\LegData.cs" />
+    <Compile Include="Rest\TrainData.cs" />
+    <Compile Include="Rest\Converter.cs" />
+    <Compile Include="Rest\ZipData.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainPage.xaml">
@@ -142,6 +147,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Rest\" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
