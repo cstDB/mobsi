@@ -85,6 +85,7 @@
     <Compile Include="Rest\TrainData.cs" />
     <Compile Include="Rest\Converter.cs" />
     <Compile Include="Rest\ZipData.cs" />
+    <Compile Include="Rest\TrainUtils.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainPage.xaml">
