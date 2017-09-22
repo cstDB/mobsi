@@ -37,30 +37,35 @@
           <Label.FormattedText>
             <FormattedString>
               <Span Text="&#9632;" ForegroundColor="Red" FontAttributes="Bold" />
-              <Span Text=" Frankfurt HbF" />
+              <!--<Span Text=" Frankfurt HbF" />-->
+                            <!--<Label Text="{Binding TestString}"></Label>-->
             </FormattedString>
           </Label.FormattedText>
         </Label>
-        <Label HorizontalTextAlignment="Start"
+                <Label Text="{Binding currentJourneyStart}"></Label>
+                
+                <Label HorizontalTextAlignment="Start"
                TextColor="Gray">
           <Label.FormattedText>
             <FormattedString>
               <Span Text="&#9632;" ForegroundColor="Red" FontAttributes="Bold" />
-              <Span Text=" ICE 4711" />
+              <!--<Span Text=" ICE 4711" />-->
             </FormattedString>
           </Label.FormattedText>
         </Label>
-        <Label HorizontalTextAlignment="Start"
+                <Label Text="{Binding currentJourneyId}"></Label>
+                <Label HorizontalTextAlignment="Start"
                TextColor="Gray">
           <Label.FormattedText>
             <FormattedString>
               <Span Text="&#9632;" ForegroundColor="Red" FontAttributes="Bold" />
-              <Span Text=" 11:45, heute" />
-            </FormattedString>
+                            <!--<Span Text=" 11:45, heute" />-->
+                        </FormattedString>
           </Label.FormattedText>
         </Label>
+                <Label Text="{Binding currentJourneyStartDate}"></Label>
 
-      </StackLayout>
+            </StackLayout>
     </Frame>
 
     <Frame OutlineColor="Gray">
