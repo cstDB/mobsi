@@ -37,13 +37,10 @@ namespace MyApp.Rest
 
             try
             {
-                HttpClient client = new HttpClient();
-                HttpResponseMessage response = await client.GetAsync(legDataAdress);
-                response.EnsureSuccessStatusCode();
-                string responseBody = await response.Content.ReadAsStringAsync();
+
+                string responseBody = await SendRequest(httpClient, legDataAdress);
 
                 dataset = LegData.FromJson(responseBody);
-                Debug.WriteLine("Leg Data: " + dataset.Data.TrainState.TrainStateCouplingActive);
             }
             catch (HttpRequestException hre)
             {
@@ -77,14 +74,9 @@ namespace MyApp.Rest
             TrainData dataset = null;
 
             try
-            {
-                HttpClient client = new HttpClient();
-                HttpResponseMessage response = await client.GetAsync(trainDataAddress);
-                response.EnsureSuccessStatusCode();
-                string responseBody = await response.Content.ReadAsStringAsync();
-
+            { 
+                string responseBody = await SendRequest(httpClient, trainDataAddress);
                 dataset = TrainData.FromJson(responseBody);
-                Debug.WriteLine("Train Data: " + dataset.Triebzugnummer);
             }
             catch (HttpRequestException hre)
             {
@@ -119,13 +111,9 @@ namespace MyApp.Rest
 
             try
             {
-                HttpClient client = new HttpClient();
-                HttpResponseMessage response = await client.GetAsync(zipDataAddress);
-                response.EnsureSuccessStatusCode();
-                string responseBody = await response.Content.ReadAsStringAsync();
-
+              
+                string responseBody = await SendRequest(httpClient, zipDataAddress);
                 dataset = ZipData.FromJson(responseBody);
-                Debug.WriteLine("Zip Data: " + dataset.ChassisId);
             }
             catch (HttpRequestException hre)
             {
@@ -152,6 +140,13 @@ namespace MyApp.Rest
             return dataset;
         }
 
-       
+        private async Task<string> SendRequest(HttpClient httpClient, string url)
+        {
+            HttpResponseMessage response = await httpClient.GetAsync(url);
+            response.EnsureSuccessStatusCode();
+            return await response.Content.ReadAsStringAsync();
+        }
     }
+
+
 }
