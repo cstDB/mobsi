@@ -11,6 +11,7 @@ using MyApp.Beacon;
 using System.Collections.ObjectModel;
 using System.Globalization;
 using System.Collections.Specialized;
+using Rest;
 
 namespace MyApp.JourneyDetection
 {
@@ -24,8 +25,6 @@ namespace MyApp.JourneyDetection
         public JourneyDetectorICE()
         {
             initBeaconListener();
-            initZIP();
-
             initEvents();
         }
 
@@ -52,12 +51,6 @@ namespace MyApp.JourneyDetection
             App.mBeaconHandler.StartRanging();
 
             //TODO  App.mBeaconMonitor.BeaconListChanged -=
-        }
-
-
-        private void initZIP()
-        {
-            //TODO
         }
 
 
@@ -93,7 +86,7 @@ namespace MyApp.JourneyDetection
         }
 
         private bool trainStarted() {
-            bool trainDrivingWLAN = true; //TODO Michael
+            bool trainDrivingWLAN = TrainUtils.Driving().Result;
             foreach (SharedBeacon beacon in Beacons)
             {
                 if (DateTime.Now.AddSeconds(-10) >= beacon.Added) { 
