@@ -19,10 +19,14 @@ namespace MyApp
 
 
     private async void CorrectRide_Clicked(object sender, EventArgs e)
-    {       await Navigation.PushAsync(new CorrectRide());     }
+    {
+      await Navigation.PushAsync(new CorrectRide());
+    }
 
     private async void UpdateView2_Clicked(object sender, EventArgs e)
-    {       //await Navigation.PushAsync(new UpdateView2());     }
+    {
+      //await Navigation.PushAsync(new UpdateView2());
+    }
 
   }
 }
